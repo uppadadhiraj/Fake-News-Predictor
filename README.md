@@ -26,11 +26,11 @@ pip install -r requirements.md
 In your Jupyter Notebook after training your model, save the following (last three lines):
 import pickle
 
-pickle.dump(model, open('model.pkl', 'wb'))
+'pickle.dump(model, open('model.pkl', 'wb'))'
 
-pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))
+'pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))'
 
-pickle.dump(le,open('le.pkl','wb'))
+'pickle.dump(le,open('le.pkl','wb'))'
 
 ### Deployment Steps
 1. Copy the files `model.pkl`, `vectorizer.pkl`, and `labelencoder.pkl` into the same folder as your Streamlit app file (`app.py`).
