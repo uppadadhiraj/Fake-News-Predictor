@@ -1,10 +1,7 @@
 import streamlit as st
-import pandas as pd
 import pickle as pkl
 from newspaper import Article
 import re
-import sklearn
-from sklearn.preprocessing import LabelEncoder
 
 model = pkl.load(open('model.pkl', 'rb'))
 vectorizer = pkl.load(open('vectorizer.pkl', 'rb'))
@@ -48,3 +45,4 @@ if st.button("Check News"):
         except Exception as e:
 
             st.error(f"Failed to process URL: {e}")
+
