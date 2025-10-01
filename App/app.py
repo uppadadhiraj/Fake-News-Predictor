@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle as pkl
 from newspaper import Article
-import joblib
 import re
 import sklearn
 from sklearn.preprocessing import LabelEncoder
@@ -47,4 +46,5 @@ if st.button("Check News"):
                 predicted_label = le.inverse_transform([label])[0]
                 st.success(f"Prediction: {predicted_label} (Confidence: {confidence:.2f})")
         except Exception as e:
+
             st.error(f"Failed to process URL: {e}")
