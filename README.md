@@ -14,7 +14,7 @@ This project aims to build an AI-powered fake news detector specialized for Indi
 - Streamlit for UI
 - Newspaper3k for scraping
 - Scikit-learn for ML and vectorization
-- Joblib for saving/loading model artifacts
+- Pickle for saving/loading model artifacts
 
 ## Setup and Installation
 
@@ -24,11 +24,13 @@ pip install -r requirements.md
 
 ### Training and Saving Artifacts
 In your Jupyter Notebook after training your model, save the following (last three lines):
-import joblib
+import pickle
 
-joblib.dump(model, 'model.pkl')
-joblib.dump(vectorizer, 'vectorizer.pkl')
-joblib.dump(labelencoder, 'labelencoder.pkl')
+pickle.dump(model, open('model.pkl', 'wb'))
+
+pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))
+
+pickle.dump(le,open('le.pkl','wb'))
 
 ### Deployment Steps
 1. Copy the files `model.pkl`, `vectorizer.pkl`, and `labelencoder.pkl` into the same folder as your Streamlit app file (`app.py`).
