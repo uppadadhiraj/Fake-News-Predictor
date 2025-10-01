@@ -20,23 +20,24 @@ This project aims to build an AI-powered fake news detector specialized for Indi
 
 ### Prerequisites
 Install dependencies:
-pip install -r requirements.md
+`pip install -r requirements.md`
 
 ### Training and Saving Artifacts
 In your Jupyter Notebook after training your model, save the following (last three lines):
-import pickle
 
-'pickle.dump(model, open('model.pkl', 'wb'))'
+`import pickle`
 
-'pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))'
+`pickle.dump(model, open('model.pkl', 'wb'))`
 
-'pickle.dump(le,open('le.pkl','wb'))'
+`pickle.dump(vectorizer, open('vectorizer.pkl', 'wb'))`
+
+`pickle.dump(le,open('le.pkl','wb'))`
 
 ### Deployment Steps
-1. Copy the files `model.pkl`, `vectorizer.pkl`, and `labelencoder.pkl` into the same folder as your Streamlit app file (`app.py`).
+1. Copy the files `model.pkl`, `vectorizer.pkl`, and `le.pkl` into the same folder as your Streamlit app file (`app.py`).
 2. Run the app:
    
-streamlit run app.py
+`streamlit run app.py`
 
 3. Open the URL provided by Streamlit in your browser to start using the fake news detector.
 
